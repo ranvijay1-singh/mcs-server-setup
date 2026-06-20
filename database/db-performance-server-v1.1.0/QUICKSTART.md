@@ -5,7 +5,7 @@
 Your MCP server has been configured with the following DB2 database:
 
 - **Database**: hvdb
-- **Host**: secperf26.rtp.raleigh.ibm.com
+- **Host**: db_host
 - **Port**: 50000
 - **User**: db2inst1
 - **Connection Name**: hvdb-production
@@ -131,12 +131,12 @@ cat ~/.bob/settings/mcp_settings.json
 
 1. Verify network connectivity:
 ```bash
-ping secperf26.rtp.raleigh.ibm.com
+ping db_host
 ```
 
 2. Test DB2 port:
 ```bash
-nc -zv secperf26.rtp.raleigh.ibm.com 50000
+nc -zv db_host 50000
 ```
 
 3. Check credentials in config file
