@@ -1,0 +1,65 @@
+{
+  "databases": {
+    "postgres": {
+      "enabled": true,
+      "connections": [
+        {
+          "name": "production-postgres",
+          "host": "localhost",
+          "port": 5432,
+          "database": "mydb",
+          "user": "dbuser",
+          "password": "your-password-here",
+          "ssl": false,
+          "poolSize": 10
+        },
+        {
+          "name": "test-postgres",
+          "host": "test-db.example.com",
+          "port": 5432,
+          "database": "testdb",
+          "user": "testuser",
+          "password": "your-password-here",
+          "ssl": true,
+          "poolSize": 5
+        }
+      ]
+    },
+    "db2": {
+      "enabled": false,
+      "connections": [
+        {
+          "name": "production-db2",
+          "host": "localhost",
+          "port": 50000,
+          "database": "MYDB",
+          "user": "db2user",
+          "password": "your-password-here",
+          "schema": "MYSCHEMA"
+        }
+      ]
+    },
+    "mssql": {
+      "enabled": false,
+      "connections": [
+        {
+          "name": "production-mssql",
+          "host": "localhost",
+          "port": 1433,
+          "database": "mydb",
+          "user": "sqluser",
+          "password": "your-password-here",
+          "options": {
+            "encrypt": true,
+            "trustServerCertificate": false
+          }
+        }
+      ]
+    }
+  },
+  "performance": {
+    "queryTimeout": 30000,
+    "slowQueryThreshold": 1000,
+    "enableMetrics": true
+  }
+}

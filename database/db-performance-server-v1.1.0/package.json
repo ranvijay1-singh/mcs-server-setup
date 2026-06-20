@@ -1,0 +1,40 @@
+{
+  "name": "db-performance-server",
+  "version": "1.1.0",
+  "description": "MCP server for analyzing DB2, PostgreSQL, and MS-SQL database performance",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "db-performance-server": "build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "watch": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "database",
+    "performance",
+    "postgresql",
+    "db2",
+    "mssql",
+    "sql-server",
+    "monitoring"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "@types/mssql": "^12.3.0",
+    "ibm_db": "^4.0.0",
+    "mssql": "^12.5.0",
+    "pg": "^8.13.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.7.2"
+  }
+}
