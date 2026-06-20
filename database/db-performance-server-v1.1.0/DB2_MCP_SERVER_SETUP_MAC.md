@@ -129,7 +129,7 @@ vim db-config.json
       "connections": [
         {
           "name": "hvdb-production",
-          "host": "secperf26.rtp.raleigh.ibm.com",
+          "host": "db_host",
           "port": 50000,
           "database": "hvdb",
           "user": "db2inst1",
@@ -459,7 +459,7 @@ node test-db2-connection.js
 
 Connection Details:
   Name: hvdb-production
-  Host: secperf26.rtp.raleigh.ibm.com
+  Host: db_host
   Port: 50000
   Database: hvdb
   User: db2inst1
@@ -515,7 +515,7 @@ List all database connections
 Available database connections:
 
 DB2 Connections:
-- hvdb-production (hvdb @ secperf26.rtp.raleigh.ibm.com:50000)
+- hvdb-production (hvdb @ db_host:50000)
 ```
 
 ### Test 2: Analyze Queries
